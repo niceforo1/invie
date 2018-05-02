@@ -3,7 +3,6 @@
 <head>
 	<title>Invie - tus mejores Guitarras!!</title>
 	<meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:700" rel="stylesheet"/>	
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 	<!-- <link rel="stylesheet" media="(max-width:800px)" href="css/media-querie.css"> -->
 	<style type="text/css">
@@ -107,6 +106,7 @@
 			</form>
 		</div>
 	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js" integrity="sha256-D0J9D4igaYyVX/Y78Tr0yoDJsy8hi14hCEdFDakBp08=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js" integrity="sha256-GMd3rFxMDNnM5JQEpiKLLl8kSrDuG5egqchk758z59g=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
@@ -149,8 +149,15 @@
 		var $body = document.body;
 		var gestos = new Hammer($body);
 		gestos.on('swipeleft', hideMenu);
-		gestos.on('swiperight', showMenu);
+		gestos.on('swiperight', showMenu);		
 	</script>
 	<link rel="stylesheet" href="css/invie.css"/>
+	<script>
+	  WebFont.load({
+		  google: {
+		    families: ['Allerta', 'Montserrat:700']
+		  }
+		});
+	</script>
 </body>
 </html>
