@@ -5,14 +5,16 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:700" rel="stylesheet">
 	<link rel="stylesheet" href="css/invie.css">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 </head>
-  <body>
+  <body class="precios">
     <header id="header" class="header background">
       <div class="contenedor">
         <figure class="logotipo"> <!-- Logotipo -->
           <img src="images/invie.png" height="60" width="186" alt="Invie - tus mejores Guitarras!!">
         </figure>
-        <nav class="menu"> <!-- Menu -->
+        <span id="burger-button" class="burger-button icon-menu "></span>
+        <nav class="menu" id="menu"> <!-- Menu -->
           <ul>
             <li> <a href="index.html">Home</a> </li>
             <li> <a href="index.html#guitarras">Guitarras</a> </li>
@@ -29,6 +31,9 @@
             <th>Modelos</th>
             <th>Precio</th>
             <th>Descripción</th>
+            <th>Modelos</th>
+            <th>Precio</th>
+            <th>Descripción</th>
           </tr>
         </thead>
         <tbody>
@@ -36,13 +41,22 @@
             <td>Invie Classic</td>
             <td>$10000</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptate excepturi temporibus, tempore sed asperiores distinctio exercitationem iste magnam nesciunt, maxime totam delectus, commodi blanditiis, possimus error corporis fugit iure.</td>
-          </tr>
-          <tr>
             <td>Invie Classic</td>
             <td>$10000</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptate excepturi temporibus, tempore sed asperiores distinctio exercitationem iste magnam nesciunt, maxime totam delectus, commodi blanditiis, possimus error corporis fugit iure.</td>
           </tr>
           <tr>
+            <td>Invie Classic</td>
+            <td>$10000</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptate excepturi temporibus, tempore sed asperiores distinctio exercitationem iste magnam nesciunt, maxime totam delectus, commodi blanditiis, possimus error corporis fugit iure.</td> 
+            <td>Invie Classic</td>
+            <td>$10000</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptate excepturi temporibus, tempore sed asperiores distinctio exercitationem iste magnam nesciunt, maxime totam delectus, commodi blanditiis, possimus error corporis fugit iure.</td>
+          </tr>
+          <tr>
+            <td>Invie Classic</td>
+            <td>$10000</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptate excepturi temporibus, tempore sed asperiores distinctio exercitationem iste magnam nesciunt, maxime totam delectus, commodi blanditiis, possimus error corporis fugit iure.</td>
             <td>Invie Classic</td>
             <td>$10000</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptate excepturi temporibus, tempore sed asperiores distinctio exercitationem iste magnam nesciunt, maxime totam delectus, commodi blanditiis, possimus error corporis fugit iure.</td>
@@ -95,5 +109,36 @@
         </form>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js" integrity="sha256-D0J9D4igaYyVX/Y78Tr0yoDJsy8hi14hCEdFDakBp08=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var consulta = window.matchMedia('(max-width: 500px)');
+    
+    consulta.addListener(mediaQuery);
+
+    var $burgerButton = document.getElementById('burger-button');
+    var $menu = document.getElementById('menu');
+    
+    // $burgerButton.addEventListener('touchstart', toogleMenu);
+    
+    function toogleMenu() {
+      $menu.classList.toggle('active')
+    }
+    
+    function mediaQuery(){
+      if ( consulta.matches){
+        $burgerButton.addEventListener('touchstart', toogleMenu);   
+      
+      }else{
+        console.log('No se cumplió la condición')
+        $burgerButton.removeEventListener('touchstart', toogleMenu);
+      }     
+    }
+
+    mediaQuery();
+    var bLazy = new Blazy({
+      selector: 'img'
+    });
+
+  </script>
   </body>
 </html>
